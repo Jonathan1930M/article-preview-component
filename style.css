@@ -1,0 +1,212 @@
+:root {
+--Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+--Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+--Grayish-Blue: hsl(212, 23%, 69%);
+--Light-Grayish-Blue: hsl(210, 46%, 95%)
+}
+
+body {
+    margin: 0;
+    font-size: 13px;
+    background-color: var(--Light-Grayish-Blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+}
+.inactive {
+    display: none;
+}
+
+
+.section-Container {
+    width: 780px;
+    height: 275px;
+    display: flex;
+}
+
+.img-flow {
+    height: 100%;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+}
+
+.section-description {
+    border-radius: 0 10px 10px 0;
+    background-color: white;
+    padding: 20px 45px 0 45px;
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 70px 80px;
+    grid-template-areas: 
+    "h3"
+    "p"
+    "section";
+}
+
+.section-description h3 {
+    grid-area: h3;
+    padding: 0;
+    margin: 0;
+    align-self: center;
+    justify-self: left;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: 'Hanken Grotesk', sans-serif;
+    color: var(--Very-Dark-Grayish-Blue);
+}
+.section-description p {
+    padding: 0;
+    margin: 0;
+    align-self: center;
+    justify-self: left;
+    grid-area: p;
+    font-size: 14px;
+    font-family: 'Hanken Grotesk', sans-serif;
+    color: var(--Desaturated-Dark-Blue);
+}
+.section-description .user-Profile {
+    grid-area: section;
+}
+
+.user-Profile {
+    display: grid;
+    grid-template-columns: 50px 130px auto 50px;
+    grid-template-rows: 1fr;
+    place-items: center;
+}
+
+.user-Profile .img-user {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
+
+.user-Profile .info-user {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin-left: 10px;
+}
+
+.info-user .name-user {
+    font-weight: 700;
+    font-size: 14px;
+    margin: 2px;
+    font-family: 'Hanken Grotesk', sans-serif;
+    color: var(--Very-Dark-Grayish-Blue);
+} 
+.info-user .date-user {
+    font-family: 'Hanken Grotesk', sans-serif;
+    color: var(--Grayish-Blue);
+}
+
+.user-Profile .icon-share {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: scale-down;
+    background-color: var(--Light-Grayish-Blue);
+    cursor: pointer;
+}
+
+.contact-rrss {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 230px;
+    height: 35px;
+    background-color: var(--Very-Dark-Grayish-Blue);
+    padding: 10px 12px  10px 12px;
+    border-radius: 8px;
+    position: absolute;
+    right: -80px;
+    bottom: 75px; 
+}
+
+.contact-rrss p {
+    margin: 0;
+    margin: 10px; 
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--Grayish-Blue);
+}
+.contact-rrss img {
+    margin: 10px;
+    width: 18px;
+    height: 18px;
+}
+.contact-rrss .icon-share {
+    display: none;
+}
+
+@media (max-width: 460px) {
+    .section-Container {
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+    .img-flow {
+        width: 100%;
+        height: 300px;
+        border-radius: 0;
+    }
+    .section-description {
+        padding: 10px 35px 0 35px;
+        height: 100vh;
+        align-content: space-evenly;
+        border-radius: 0;
+        position: relative;
+        z-index: 30;
+    } 
+
+    .contact-rrss {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        height: 65px;
+        border-radius: 0 0 8px 8px;
+        position: absolute;
+        padding: 0;
+        bottom: 20px;
+        right: 0;
+        z-index: 40;
+    }
+    .contact-rrss p {
+        padding-left: 15px;
+    }
+    .contact-rrss .icon-rrss {
+        padding-left: 6px;
+    }
+
+     .contact-rrss .icon-share {
+        display: flex;
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        object-fit: scale-down;
+        right: 10%;
+        background-color: var(--Grayish-Blue);
+    } 
+
+}
+
+
+.attribution{ 
+    position: absolute;
+    font-size: 11px; text-align: center; 
+    bottom: 0;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
+
